@@ -54,3 +54,30 @@ In here **eth0** stands for ethernet.If you are coonected to raspberry through w
 ![This is image](https://i.imgur.com/DhgiZXz.jpg)
 
 In here 192.168.1.1 is my default gateway.
+3. Next is DNS. Your router’s DNS (Domain Name System) IP address. This is typically the same as its gateway address, but may be set to another value to use an alternative DNS – such as 8.8.8.8 for Google, or 1.1.1.1 for Cloudflare. But here i am  using gateway address that is 192.168.1.1
+4. it’s time to edit the dhcpcd.conf configuration file to add the settings you need to set up a static IP address for your Raspberry Pi
+5. Type this command on terminal
+```sh
+sudo nano /etc/dhcpcd.conf
+```
+6. add the following lines at the bottom
+
+![This is image](https://i.imgur.com/P1RwDiO.jpg)
+
+**interface eth0**
+
+**static ip_address = 192.168.1.156**
+
+**static routers = 192.168.1.1**
+
+**static domain_name_servers = 192.168.1.1**
+
+
+| Command | Description |
+| --- | --- |
+| Interface |your network connection type  eth0 (Ethernet) or wlan0 (wireless) |
+| static ip_address  | the static IP address you want to set for the Raspberry Pi | 
+| static routers  | the gateway IP address for your router on the local network |
+| static domain_name_servers | the DNS IP address (typically the same as your router’s gateway address) |
+
+
