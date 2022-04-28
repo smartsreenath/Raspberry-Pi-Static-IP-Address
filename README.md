@@ -97,4 +97,4 @@ I am using Tplink AX1500 Wi-Fi 6 Router. Steps will be different.
 
 ![This is image](https://i.imgur.com/XPhQUSl.jpg)
 
-6. Click Save
+6. Click Save :electron:
