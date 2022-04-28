@@ -65,13 +65,9 @@ sudo nano /etc/dhcpcd.conf
 ![This is image](https://i.imgur.com/P1RwDiO.jpg)
 
 **interface eth0**
-
 **static ip_address = 192.168.1.156**
-
 **static routers = 192.168.1.1**
-
 **static domain_name_servers = 192.168.1.1**
-
 
 | Command | Description |
 | --- | --- |
@@ -80,4 +76,24 @@ sudo nano /etc/dhcpcd.conf
 | static routers  | the gateway IP address for your router on the local network |
 | static domain_name_servers | the DNS IP address (typically the same as your router’s gateway address) |
 
+## 2. Method DHCP Configuration in Router
+
+I am using Tplink AX1500 Wi-Fi 6 Router. Steps will be different.
+1. Go to ip address of router and login
+2. Go to advance settings
+
+![This is image](https://i.imgur.com/IXM7Yu5.jpg)
+
+3. Click DHCP
+4. Then Click add, This will Reserve IP addresses for specific devices connected to the router
+
+![This is image](https://i.imgur.com/DZp02tV.jpg)
+
+5. Click the view connected devices and select the device from the list.
+
+![This is image](https://i.imgur.com/qQIn32J.jpg)
+
+![This is image](https://i.imgur.com/K1Xi5BK.jpg)
+
+![This is image](https://i.imgur.com/XPhQUSl.jpg)
 
